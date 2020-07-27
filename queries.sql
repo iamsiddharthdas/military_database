@@ -1,0 +1,101 @@
+CREATE TABLE retired_Soldier
+(
+rs_id number NOT NULL PRIMARY KEY,
+rs_firstn VARCHAR(25) NOT NULL,
+rs_lastn VARCHAR(25) NOT NULL,
+rs_gen CHAR(1) NOT NULL CHECK(rs_gen in('M','F','m','f')),
+rs_rank VARCHAR(25) NOT NULL,
+rs_phone number(10) NOT NULL,
+rs_email VARCHAR(25) NOT NULL,
+rs_posting VARCHAR(25) NOT NULL
+);
+insert into retired_soldier select s_id,s_firstn,s_lastn,s_gen,s_rank,s_phone,s_email,s_posting
+from soldier where s_id = 1234;
+delete from soldier where s_id=(select s_id from soldier where s_email = 'abcd@gmail.com');
+delete from father where f_id=(select f_id from father where f_email = 'rahuld@gmail.com');
+delete from mother where m_id=(select m_id from mother where m_email =
+'lmang@gmail.com');
+delete from spouse where sp_id=(select sp_id from mother where sp_email =
+'rani@gmail.com');
+delete from vision where vis_id =1;
+delete from vaccine where v_id =1;
+delete from medical where m_id =(select s_id from soldier where s_email = 'abcd@gmail.com');
+delete from skillset where sk_id =(select s_id from soldier where s_email = 'abcd@gmail.com');
+delete from arms_used where a_id =(select s_id from soldier where s_email =
+'abcd@gmail.com');
+delete from SB where s_id =(select s_id from soldier where s_email = 'abcd@gmail.com');
+
+###
+
+CREATE TABLE martyred_Soldier
+(
+ms_id number NOT NULL PRIMARY KEY,
+ms_firstn VARCHAR(25) NOT NULL,
+ms_lastn VARCHAR(25) NOT NULL,
+ms_gen CHAR(1) NOT NULL CHECK(ms_gen in('M','F','m','f')),
+ms_rank VARCHAR(25) NOT NULL,
+ms_posting VARCHAR(25) NOT NULL
+);
+insert into martyred_soldier select s_id,s_firstn,s_lastn,s_gen,s_rank,s_posting from soldier
+where s_id = 1234;
+delete from soldier where s_id=(select s_id from soldier where s_email = 'abcd@gmail.com');
+delete from father where f_id=(select f_id from father where f_email = 'rahuld@gmail.com');
+delete from mother where m_id=(select m_id from mother where m_email =
+'lmang@gmail.com');
+delete from spouse where sp_id=(select sp_id from mother where sp_email =
+'rani@gmail.com');
+delete from vision where vis_id =1;
+delete from vaccine where v_id =1;
+delete from medical where m_id =(select s_id from soldier where s_email = 'abcd@gmail.com');
+delete from skillset where sk_id =(select s_id from soldier where s_email = 'abcd@gmail.com');
+delete from arms_used where a_id =(select s_id from soldier where s_email =
+'abcd@gmail.com');
+delete from SB where s_id =(select s_id from soldier where s_email = 'abcd@gmail.com');
+
+###
+
+update soldier set s_posting = 'Delhi' where s_id=1234;
+update soldier set s_state = 'Delhi NCR' where s_id=1234;
+
+###
+
+update arms_used set AK103=1 where s_id=(select s_id from soldier where S_rank='General');
+
+###
+
+select count(s_id),s_posting from soldier group by s_posting;
+
+###
+
+select count(s_id) "Count of soldiers using AK103" from arms_used group by ak103;
+
+###
+
+select * from medical natural join vaccine natural join vision where m_id=&m_id;
+
+###
+
+select * from soldier natural join sb where s_id=&s_id order by ifsc desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
