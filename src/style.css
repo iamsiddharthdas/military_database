@@ -1,0 +1,80 @@
+#main-wrapper
+{
+	width: 250px;
+	margin: 0 auto;
+	background:azure;
+	padding: 5px;
+	border-radius: 10px;
+	border: 2px solid #2c3e50;
+    opacity: 0.8;
+   filter: alpha(opacity=50);
+}
+#main-wrapper1
+{
+	width: 400px;
+	margin: 0 auto;
+	background: white;
+	padding: 5px;
+	border-radius: 10px;
+	border: 2px solid #2c3e50;
+
+}
+}
+/*.avatar
+{
+	width: 150px;
+	text-align: center;
+	border-radius: 200px;
+}*/
+
+.myform
+{
+	
+	width: 550px;
+	margin: 0 auto;
+
+}
+.inputvalues
+{
+	margin-top:5px; 
+	width: 200px;
+	padding: 5px;
+}
+#submit_btn
+{
+	margin-top:5px; 
+	background-color: #27ae60;
+	padding: 5px;
+	color: white;
+	width: 48%;
+	text-align:center;
+	font-size: 18px;
+	font-weight: bold;
+}
+#submit_btn1
+{
+	margin-top:5px; 
+	background-color: #27ae60;
+	padding: 5px;
+	color: white;
+	width: 38%;
+	text-align:center;
+	font-size: 18px;
+	font-weight: bold;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button1 {
+    background-color: #4CAF50;
+    color: green;
+    padding: 10px 24px;
+    border: 2px solid #4CAF50; /* Green */
+}
