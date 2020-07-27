@@ -1,3 +1,5 @@
+###
+
 CREATE TABLE retired_Soldier
 (
 rs_id number NOT NULL PRIMARY KEY,
