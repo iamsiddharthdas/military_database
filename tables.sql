@@ -1,3 +1,4 @@
+
 create table users(userid int not null, name varchar(50) not null,phone varchar(20) not null, email varchar(50) not null, password varchar(20) not null, address varchar(100) not null,usertype varchar(50) not null, primary key(userid));
 
 create table account (acc_no int not null, userid int not null,ddate date not null, expiry date not null, balance int not null, primary key(acc_no, userid));
